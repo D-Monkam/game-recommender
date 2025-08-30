@@ -17,7 +17,7 @@ A full-stack web application that recommends games based on user preferences, bu
 
 ![screenshot](screenshot.png) 
 
-[Live Demo](https://your-demo-link.com) <!-- If deployed, add your live link here -->
+[Live Demo]([https://your-demo-link.com](https://game-recommender-git-main-hihibingonamo-3416s-projects.vercel.app)) <!-- If deployed, add your live link here -->
 
 ---
 
