@@ -14,17 +14,27 @@ const GameList = ({ answers }) => {
   }, [answers])
 
   useEffect(() => {
-    setLoading(true)
-    fetchGames({ ...answers, page: page }).then((res) => {
-      console.log("Fetched games:", res)
-      console.log("Page Number:", page)
+    const fetchGames = async () => {
+      setLoading(true)
+      try {
+        const params = new URLSearchParams({ ...answers, page }).toString()
+        const res = await fetch(`/api/games?${params}`)
+        const data = await res.json()
 
-      setGames(page === 0 ? res : (prev) => [...prev, ...res])
+        console.log("Fetched games:", data)
+        console.log("Page Number:", page)
 
+        setGames(page === 0 ? data : (prev) => [...prev, ...data])
+      } catch (err) {
+        console.error("Failed to fetch games:", err)
+      } finally {
+        setLoading(false)
+      }
+    }
 
-      setLoading(false)
-    })
+    fetchGames()
   }, [page, answers])
+
 
   const handleLoadMore = () => setPage((prev) => prev + 1)
 
