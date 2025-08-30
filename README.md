@@ -15,7 +15,7 @@ A full-stack web application that recommends games based on user preferences, bu
 
 ## Demo
 
-![screenshot](<img width="1895" height="922" alt="image" src="https://github.com/user-attachments/assets/d15a68bd-7b52-403b-a8f4-d6258375c0e4" />) 
+<img width="1895" height="922" alt="image" src="https://github.com/user-attachments/assets/d15a68bd-7b52-403b-a8f4-d6258375c0e4" /> 
 
 [Live Demo](https://game-recommender-git-main-hihibingonamo-3416s-projects.vercel.app/) <!-- If deployed, add your live link here -->
 
@@ -57,13 +57,8 @@ A full-stack web application that recommends games based on user preferences, bu
      IDGB_ACCESS_TOKEN=your_igdb_access_token
      ```
 
-4. **Start the backend server:**
-   ```sh
-   npx nodemon --exec ts-node index.ts
-   ```
-   The backend runs on [http://localhost:4000](http://localhost:4000).
 
-5. **Start the frontend (Next.js):**
+4. **Start the frontend (Next.js):**
    ```sh
    npm run dev
    ```
@@ -75,25 +70,59 @@ A full-stack web application that recommends games based on user preferences, bu
 
 ```
 /
-├── app/                # Next.js frontend (pages, components)
-├── client/             # (If present) Additional client-side code
-├── index.ts            # Express backend entry point
-├── .env                # Environment variables
-├── package.json
-└── README.md
+├── .next/ # Next.js build output
+├── app/ # Next.js app directory
+│ ├── globals.css # Global styles
+│ ├── layout.tsx # Root layout
+│ └── page.tsx # Main page component
+│
+├── client/ # Client-side code
+│ └── src/
+│ ├── components/ # Reusable UI components
+│ │ ├── survey/ # Survey-related components
+│ │ ├── GameCard.jsx
+│ │ ├── GameList.jsx
+│ │ └── Games.ts
+│ └── styles.css # Component-specific styles
+│
+├── components/ # Global/shared components
+│ ├── ui/ # UI library wrappers
+│ └── theme-provider.tsx # Theme provider
+│
+├── hooks/ # Custom React hooks
+├── lib/ # Utility functions and helpers
+├── node_modules/ # Project dependencies
+│
+├── pages/ # Next.js pages directory
+│ └── api/
+│ └── games.js # Serverless API route
+│
+├── public/ # Static assets
+├── styles/ # Global styling
+│
+├── index.ts # Backend server entry point
+├── postcss.config.mjs # PostCSS configuration
+├── tailwind.config.js # TailwindCSS configuration
+│
+├── .env # Environment variables
+├── .gitignore # Git ignore rules
+├── components.json # Component configuration
+└── package.json # Project metadata & dependencies
 ```
 
 ---
 
 ## Screenshots
 
-<!-- Add screenshots/gifs here to show off your UI -->
+<img width="1902" height="767" alt="image" src="https://github.com/user-attachments/assets/b1962417-3b2b-4768-a042-8681dc7d3de9" />
+<img width="1893" height="917" alt="image" src="https://github.com/user-attachments/assets/3cef8f75-380f-4eed-ae1e-79dd1fa20e87" />
+
 
 ---
 
 ## About Me
 
-Hi! I’m Dillon Monkam, a CS student aspiring to be a Software Engineer who's passionate about building engaging web experiences based on my interests. In this case video gaems. 
+Hi! I’m Dillon Monkam, a CS student aspiring to be a Software Engineer who's passionate about building engaging web experiences based on my interests. In this case, video games. 
 Feel free to [connect with me on LinkedIn](https://linkedin.com/in/yourprofile).
 
 ---
