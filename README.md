@@ -123,7 +123,7 @@ A full-stack web application that recommends games based on user preferences, bu
 ## About Me
 
 Hi! I’m Dillon Monkam, a CS student aspiring to be a Software Engineer who's passionate about building engaging web experiences based on my interests. In this case, video games. 
-Feel free to [connect with me on LinkedIn](https://linkedin.com/in/yourprofile).
+Feel free to [connect with me on LinkedIn](www.linkedin.com/in/dillon-monkam-5967182ab).
 
 ---
 
