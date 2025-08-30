@@ -1,0 +1,12 @@
+@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.App {
+  font-family: "Courier New", monospace;
+  text-align: center;
+  background: oklch(0.1 0 0); /* Dark gaming background */
+  color: oklch(0.95 0 0); /* White text */
+  min-height: 100vh;
+}
